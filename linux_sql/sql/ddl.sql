@@ -1,7 +1,7 @@
---Switching to host_agent database
+--switch to `host_agent` database
 \c host_agent
 
--- Creating a host_info table if doesnt exists
+-- create `host_info` table if not exist
 CREATE TABLE IF NOT EXISTS host_info
 ( 
      id               SERIAL NOT NULL, 
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS host_info
      CONSTRAINT host_info_un UNIQUE (hostname) 
   );
 
--- Created host_usage table if doesnt exists
+-- create `host_usage` table if not exist
 CREATE TABLE IF NOT EXISTS host_usage 
   ( 
      "timestamp"    TIMESTAMP NOT NULL, 
